@@ -1,6 +1,7 @@
 package org.lee.controller;
 
 import org.lee.entity.Menu;
+import org.lee.entity.MenuVO;
 import org.lee.repository.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,7 +28,7 @@ public class MenuController {
     }
 
     @GetMapping("/findAll/{index}/{limit}")
-    public List<Menu> findAll(@PathVariable("index") int index, @PathVariable("limit") int limit){
-        return menuRepository.findAll(index,limit);
+    public MenuVO findAll(@PathVariable("index") int index, @PathVariable("limit") int limit){
+        return new MenuVO(0,"",100,menuRepository.findAll(index, limit));
     }
 }
