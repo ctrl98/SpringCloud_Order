@@ -12,6 +12,7 @@
         <module>eurekaserver</module>
         <module>nativeconfigserver</module>
         <module>order</module>
+        <module>menu</module>
     </modules>
 
     <parent>
