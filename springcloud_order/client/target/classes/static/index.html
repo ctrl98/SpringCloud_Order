@@ -31,8 +31,9 @@
                         ,{field:'name', width:200, title: '菜品'}
                         ,{field:'price', width:100, title: '单价'}
                         ,{field:'flavor', width:100, title: '口味'}
+                        // ,{field:'type.name',width:100,  title: '分类'}  layui取对象的值不能这样写,要加一个templet函数里的data当前行数据来读取
                         ,{field:'tid',width:100,  title: '分类',templet:function(data){
-                            return "三鲜"
+                            return data.type.name
                         }
                     }
                         ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:70}
