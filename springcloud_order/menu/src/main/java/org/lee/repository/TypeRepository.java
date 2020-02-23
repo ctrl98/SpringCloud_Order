@@ -5,7 +5,7 @@ import org.lee.entity.Type;
 import java.util.List;
 
 public interface TypeRepository {
-    public Type findById(long id);
+    Type findById(long id);
 
-    public List<Type> findAll();
+    List<Type> findAll();
 }

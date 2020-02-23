@@ -5,15 +5,15 @@ import org.lee.entity.Menu;
 import java.util.List;
 
 public interface MenuRepository {
-    public List<Menu> findAll(int index, int limit);
+    List<Menu> findAll(int index, int limit);
 
-    public int count();
+    int count();
 
-    public Menu findById(long id);
+    Menu findById(long id);
 
-    public void save(Menu menu);
+    void save(Menu menu);
 
-    public void update(Menu menu);
+    void update(Menu menu);
 
-    public void deleteById(long id);
+    void deleteById(long id);
 }

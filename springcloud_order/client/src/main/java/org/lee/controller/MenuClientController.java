@@ -58,4 +58,17 @@ public class MenuClientController {
         menuFeign.save(menu);
         return "redirect:/clientM/index";
     }
+
+    @GetMapping("/findById/{id}")
+    public String findById(Model model,@PathVariable("id")long id){
+        model.addAttribute("menu",menuFeign.findById(id));
+        model.addAttribute("typesList",menuFeign.findAllTypes());
+        return "menu_update";
+    }
+
+    @PostMapping("/update")
+    public String update(Menu menu){
+        menuFeign.update(menu);
+        return "redirect:/clientM/index";
+    }
 }
